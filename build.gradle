@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin:  'war'
+
+group 'com.tommss.web'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+    mavenLocal()
+}
+
+dependencies {
+    testCompile 'org.junit.jupiter:junit-jupiter-api:+',
+            'org.hamcrest:java-hamcrest:+'
+    compileOnly 'org.apache.tomcat:tomcat-api:+',
+            'org.projectlombok:lombok:+'
+
+}
